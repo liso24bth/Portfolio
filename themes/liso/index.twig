@@ -1,0 +1,25 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="two-col-layout">
+        <div class="main" role="main">
+            <figure class="right">
+                <img src="assets/img/me_image_369x369.png" alt="image of me" title="me_image">
+            </figure>             
+            <h1> PORTFOLIO </h1>        
+            <p>
+                Välkommen till min portfolio i design-kursen.
+            </p>
+        </div>
+        
+        <div class="right-sidebar aside">
+            <div class="sidebar-content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+
+    {% include 'incl/footer.twig' %}
+</body>

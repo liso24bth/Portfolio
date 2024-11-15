@@ -1,0 +1,245 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background: linear-gradient(to right, white 60%, #CC4D56 40%);
+    font-family: sans-serif;
+    font-size: 1.1em;
+    line-height: 3rem;
+    color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    padding-left: 1.5em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1; /* Ensures the main content takes up available space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Two-Column Layout */
+.two-col-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+.two-col-layout > .main {
+    width: 60%;
+    padding: 2em;
+    overflow-y: auto;
+    margin: 0em 2em 4em 0;
+}
+
+.two-col-layout > .main > figure.right {
+    float: right;
+    margin-left: 0.5em; /* Adds space between the image and text */
+}
+
+.main h1 {
+    font-family: 'Comfortaa', Arial, Playfair Display, serif;
+    font-size: 3em;
+    color: #CC4D56;
+    text-align: left;
+    margin: 2em 2em 1em 0;
+}
+
+/* Ensure the image doesn't exceed the content width */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.two-col-layout > .aside {
+    width: 40%;
+    background-color: #CC4D56;
+    padding: 2em 2em 2em 0;
+    overflow-y: auto;
+}
+
+.aside h2 {
+    font-family: 'Comfortaa', Arial, Playfair Display, serif;
+    font-size: 1.6em;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    border-bottom: 1.4px solid #de9898;
+}
+
+.aside p {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+}
+
+/* Header */
+.header, .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Title */
+.title, .logo {
+    padding: 0em 1em 0em 0;
+}
+
+@media (max-width: 767px) {
+    .title, .logo {
+        padding: 0em 0em 0em 0;
+    }
+    .title {
+        min-width: 50%;
+    }
+    .logo {
+        max-width: 30%;
+    }
+}
+
+/* Navbar Styling */
+.nav {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    flex: 1;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.nav ul li {
+    padding: 0 0.5em;
+}
+
+.nav ul li a {
+    color: #BD2742;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0em 2em;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0.5;
+    top: -1;
+    height: 5px;
+    width: 0;
+    background-color: #ffdcdc;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav ul li a:hover {
+    color: #000000;
+}
+
+.nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(200, 120, 120, 0.456);
+    box-shadow: 3px 0 7px rgba(0, 0, 0, 0.711);
+    padding: 0.5em 2em;
+    width: 100%;
+    position: relative;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer a {
+    color: #000000;
+    margin: 0.3em 1em 0.3em 0;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer .social {
+    font-size: 3rem;
+}
+
+/* Typography */
+p, td, th, li, dd {
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.6em;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Code */
+code {
+    margin: 0 0.1em;
+    padding: 0.1em 0.2em;
+    border: 1px solid #656565;
+    border-radius: 0.3em;
+    background: #d59e9e;
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.9824;
+}
+
+pre {
+    padding: 0 1em;
+    border: 1px solid #656565;
+    border-radius: 0.3em;
+    background: #c68181;
+}
+
+pre code {
+    display: block;
+    margin: 0;
+    padding: 1.1111em 0;
+    border: 0 none;
+    background: transparent;
+    overflow-x: auto;
+    line-height: 1.4;
+}
+
+/* Blockquote */
+blockquote {
+    font-style: italic;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 0.5em solid #f6c8c8;
+}
